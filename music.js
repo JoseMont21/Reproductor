@@ -75,6 +75,10 @@ function init() {
     title.innerHTML = song.title;
     artist.innerHTML = song.artist;
     art.setAttribute("src", song.art);
+
+    audio.onended = function(){
+        nextTrack();
+    };
 }
 
 audio.addEventListener('timeupdate', updateTrack, false);
